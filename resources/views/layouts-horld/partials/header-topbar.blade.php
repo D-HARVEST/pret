@@ -49,7 +49,7 @@
                                             <h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
                                        </div>
                                        <div class="col-auto">
-                                            <a class="text-dark text-decoration-underline">
+                                            <a href="javascript: void(0);" class="text-dark text-decoration-underline">
                                                  <small>Clear All</small>
                                             </a>
                                        </div>
@@ -57,10 +57,10 @@
                              </div>
                              <div data-simplebar style="max-height: 280px;">
                                   <!-- Item -->
-                                  <a  class="dropdown-item py-3 border-bottom text-wrap">
+                                  <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom text-wrap">
                                        <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                 <img src="{{asset('assets/images/users/avatar-1.jpg')}}" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-1" />
+                                                 <img src="assets/images/users/avatar-1.jpg" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-1" />
                                             </div>
                                             <div class="flex-grow-1">
                                                  <p class="mb-0"><span class="fw-medium">Josephine Thompson </span>commented on admin panel <span>" Wow 😍! this admin looks good and awesome design"</span></p>
@@ -68,7 +68,7 @@
                                        </div>
                                   </a>
                                   <!-- Item -->
-                                  <a  class="dropdown-item py-3 border-bottom">
+                                  <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                        <div class="d-flex">
                                             <div class="flex-shrink-0">
                                                  <div class="avatar-sm me-2">
@@ -86,10 +86,10 @@
                                        </div>
                                   </a>
                                   <!-- Item -->
-                                  <a  class="dropdown-item py-3 border-bottom">
+                                  <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                        <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                 <img src="{{asset('assets/images/users/avatar-3.jpg')}}" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3" />
+                                                 <img src="assets/images/users/avatar-3.jpg" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3" />
                                             </div>
                                             <div class="flex-grow-1">
                                                  <p class="mb-0 fw-semibold">Jacob Gines</p>
@@ -100,7 +100,7 @@
                                        </div>
                                   </a>
                                   <!-- Item -->
-                                  <a  class="dropdown-item py-3 border-bottom">
+                                  <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                        <div class="d-flex">
                                             <div class="flex-shrink-0">
                                                  <div class="avatar-sm me-2">
@@ -116,10 +116,10 @@
                                        </div>
                                   </a>
                                   <!-- Item -->
-                                  <a  class="dropdown-item py-3 border-bottom">
+                                  <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                        <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                 <img src="{{asset('assets/images/users/avatar-5.jpg')}}" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5" />
+                                                 <img src="assets/images/users/avatar-5.jpg" class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5" />
                                             </div>
                                             <div class="flex-grow-1">
                                                  <p class="mb-0 fw-semibold">Shawn Bunch</p>
@@ -131,7 +131,7 @@
                                   </a>
                              </div>
                              <div class="text-center py-3">
-                                  <a  class="btn btn-primary btn-sm">View All Notification <i class="ri-arrow-right-line ms-1"></i></a>
+                                  <a href="javascript:void(0);" class="btn btn-primary btn-sm">View All Notification <i class="ri-arrow-right-line ms-1"></i></a>
                              </div>
                         </div>
                    </div>
@@ -147,16 +147,32 @@
                    <div class="dropdown topbar-item">
                         <a type="button" class="topbar-button" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              <span class="d-flex align-items-center">
-                                  <img class="rounded-circle" width="32" src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="avatar-3">
+                                  <img class="rounded-circle" width="32" src="assets/images/users/avatar-1.jpg" alt="avatar-3">
                              </span>
                         </a>
-                        <div class="nav-item dropdown" style="width: 100px; height: auto;">
+                        <div class="dropdown-menu dropdown-menu-end">
                              <!-- item-->
-                             <li class="nav-item dropdown">
-                                @if (auth()->user())
-                                    @include('layouts.partials.profile-card')
-                                @endif
-                            </li>
+                             <h6 class="dropdown-header">Welcome Gaston!</h6>
+
+                             <a class="dropdown-item" href="pages-calendar.html">
+                                  <iconify-icon icon="solar:calendar-broken" class="align-middle me-2 fs-18"></iconify-icon><span class="align-middle">My Schedules</span>
+                             </a>
+
+                             <a class="dropdown-item" href="pages-pricing.html">
+                                  <iconify-icon icon="solar:wallet-broken" class="align-middle me-2 fs-18"></iconify-icon><span class="align-middle">Pricing</span>
+                             </a>
+                             <a class="dropdown-item" href="pages-faqs.html">
+                                  <iconify-icon icon="solar:help-broken" class="align-middle me-2 fs-18"></iconify-icon><span class="align-middle">Help</span>
+                             </a>
+                             <a class="dropdown-item" href="auth-lock-screen.html">
+                                  <iconify-icon icon="solar:lock-keyhole-broken" class="align-middle me-2 fs-18"></iconify-icon><span class="align-middle">Lock screen</span>
+                             </a>
+
+                             <div class="dropdown-divider my-1"></div>
+
+                             <a class="dropdown-item text-danger" href="auth-signin.html">
+                                  <iconify-icon icon="solar:logout-3-broken" class="align-middle me-2 fs-18"></iconify-icon><span class="align-middle">Logout</span>
+                             </a>
                         </div>
                    </div>
               </div>
